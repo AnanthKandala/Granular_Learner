@@ -1,0 +1,26 @@
+Date created: 23 November 2023
+
+Code to write:
+[done]    - Initialize spheres inside the rectangle:
+        - Create a grid and randomly select points to place the spheres.
+
+[done]    - Calculate the energy of the system: 
+        - Obtain pairwise "shortest" distances and compute the bulk and boundary interaction energies
+
+    - Optimizer:
+        - Starting from some initialization, use scipy minimize to obtain the stable configuration of the particles.
+          particle positions are bounded to be inside the 
+          ** I dont understand how the optimzation algorithm knows about the periodic conditions. The energy function is periodic.
+             Is this enough?
+        - Which is the best optimizer? What aout pre-conditioning?
+
+    - Callbacks for the Optimizer:
+        - Record positions, total energy, bulk energy, boundary energy though the process of optimization
+        - Record the metric used for convergence and optimization 
+    
+[done]    - plotter:
+        - plot the state of the system: 
+            - boundary rectangle
+            - boundary spheres
+            - interior spheres, differentiate the radii and sphere index
+            - dotted spheres to show periodicity in the y direction.
